@@ -1,0 +1,13 @@
+import { Request, Response } from "express";
+import { Product } from "../../Product";
+
+export async function listProducts(req: Request, res: Response) {
+  try {
+    const categories = await Product.find();
+
+    res.json(categories);
+  } catch (error) {
+    console.log(error);
+    res.sendStatus(500);
+  }
+}

@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { Order } from "../../Order";
+import { Order } from "../../models/Order";
 
 export async function changeOrderStatus(req: Request, res: Response) {
   try {

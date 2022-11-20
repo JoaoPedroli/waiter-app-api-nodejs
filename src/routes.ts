@@ -2,15 +2,15 @@ import path from "node:path";
 
 import { Router } from "express";
 import multer from "multer";
-import { createCategories } from "./app/models/useCases/categories/createCategories";
-import { listCategories } from "./app/models/useCases/categories/listCategories";
-import { cancelOrder } from "./app/models/useCases/orders/cancelOrder";
-import { changeOrderStatus } from "./app/models/useCases/orders/changeOrderStatus";
-import { createOrder } from "./app/models/useCases/orders/createOrder";
-import { listOrders } from "./app/models/useCases/orders/listOrders";
-import { createProduct } from "./app/models/useCases/products/createProduct";
-import { listProducts } from "./app/models/useCases/products/listProducts";
-import { listProductsByCategory } from "./app/models/useCases/products/listProductsByCategory";
+import { createCategories } from "./app/useCases/categories/createCategories";
+import { listCategories } from "./app/useCases/categories/listCategories";
+import { cancelOrder } from "./app/useCases/orders/cancelOrder";
+import { changeOrderStatus } from "./app/useCases/orders/changeOrderStatus";
+import { createOrder } from "./app/useCases/orders/createOrder";
+import { listOrders } from "./app/useCases/orders/listOrders";
+import { createProduct } from "./app/useCases/products/createProduct";
+import { listProducts } from "./app/useCases/products/listProducts";
+import { listProductsByCategory } from "./app/useCases/products/listProductsByCategory";
 
 export const router = Router();
 

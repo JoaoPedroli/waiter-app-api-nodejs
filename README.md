@@ -1,4 +1,5 @@
 ## WAITERAPP - API
 
-### yarn
-### yarn dev
+### Run:
+#### `yarn`
+#### `yarn dev`

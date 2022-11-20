@@ -3,13 +3,19 @@ import { Product } from "../../Product";
 
 export async function createProduct(req: Request, res: Response) {
   try {
-    const { icon, name } = req.body;
+    const imagePath = req.file?.filename;
+    const { name, description, price, category, ingredients } = req.body;
 
-    const category = await Product.create({
-
+    const product = await Product.create({
+      name,
+      description,
+      price: Number(price),
+      imagePath,
+      category,
+      ingredients: JSON.parse(ingredients ?? "[]"),
     });
 
-    res.json(category);
+    res.status(201).json(product);
   } catch (error) {
     console.log(error);
     res.sendStatus(500);

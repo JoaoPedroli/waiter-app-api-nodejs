@@ -9,8 +9,10 @@ mongoose
   .then(() => {
     const app = express();
 
+    // Allows you to view files saved in the "uploads" folder
     app.use("/uploads", express.static(path.resolve(__dirname, "..", "uploads")));
-    app.use(express.json());
+    // Use in that order!! First allow JSON in requests, then use routes
+    app.use(express.json()); // allow JSON in requests
     app.use(router);
 
     const port = 3001;
